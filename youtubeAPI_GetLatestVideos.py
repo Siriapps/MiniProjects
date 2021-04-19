@@ -3,8 +3,7 @@ from urllib import request
 import os
 
 tagsList = []
-# apiKey = os.getenv("YOUTUBE_APIKEY")
-apiKey = "AIzaSyDqUf0Zh7NLQRme8hWai7_kkR_Ybh3XdKw"
+apiKey = os.getenv("YOUTUBE_APIKEY")
 def getLatestVideos(channel_Id, maxVideos):
     part = "snippet"
     url = f"https://www.googleapis.com/youtube/v3/search?part={part}&channelId={channel_Id}&maxResults={maxVideos}&order=date&type=video&key={apiKey}"
@@ -21,7 +20,6 @@ def getLatestVideos(channel_Id, maxVideos):
                 "Description":description
             })
 
-        # return data
     except Exception as e:
         print("Error ",e)
     return tagsList
