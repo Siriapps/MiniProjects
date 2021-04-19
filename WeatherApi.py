@@ -20,6 +20,7 @@ def getWheatherApi():
     data = handle.read().decode()  # reading the data
     return data
 
+
 @trackTime
 def parseWeatherData(WeatherForecast):
     js = json.loads(WeatherForecast)  # loading the json

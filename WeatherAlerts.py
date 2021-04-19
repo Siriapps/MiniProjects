@@ -22,4 +22,3 @@ area = input("Enter your area: ").upper()
 data = getWheatherApi(area)
 WeatherAlerts = parseWeatherAlerts(data)
 [print(i) for i in WeatherAlerts]
-
