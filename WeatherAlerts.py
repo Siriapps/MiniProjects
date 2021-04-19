@@ -2,8 +2,7 @@ from urllib import request
 import json
 
 def getWheatherApi(area):
-    api = "https://api.weather.gov/alerts/active?area="
-    api+=area
+    api = f"https://api.weather.gov/alerts/active?area={area}"
     handle = request.urlopen(api)  # opening the api url
     data = handle.read().decode()  # reading the data
     return data
