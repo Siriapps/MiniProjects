@@ -4,6 +4,7 @@ def format(func):
         print(f"+{num[:-10]} {func(num)}")  # formats the phone number into country code & rest of the phone number
     return inner
 
+
 @format
 def phoneNum(phone):
     return phone[-10:] # returns only the phone number excluding the country code

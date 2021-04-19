@@ -14,5 +14,6 @@ def smartDivide(func):
 def divide(a, b):
     print(a/b)
 
+
 a,b = map(int,input("Enter a,b: ").split())
 divide(a,b)
