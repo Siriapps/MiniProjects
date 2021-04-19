@@ -11,6 +11,7 @@ def trackTime(funcToBeDecorated):
 
     return timeTaken()
 
+
 @trackTime
 def func():
     time.sleep(4)
