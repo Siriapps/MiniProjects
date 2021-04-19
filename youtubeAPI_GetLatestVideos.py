@@ -15,9 +15,11 @@ def getLatestVideos(channel_Id, maxVideos):
         for item in items:
             title = item["snippet"]["title"]
             description = item["snippet"]["description"]
+            videoId = item["id"]["videoId"]
             tagsList.append({
                 "Title" : title,
-                "Description":description
+                "Description":description,
+                "Video ID":videoId
             })
 
     except Exception as e:
