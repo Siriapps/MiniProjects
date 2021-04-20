@@ -6,7 +6,8 @@ tagsList = []
 apiKey = os.getenv("YOUTUBE_APIKEY")
 def getLatestVideos(channel_Id, maxVideos):
     part = "snippet"
-    url = f"https://www.googleapis.com/youtube/v3/search?part={part}&channelId={channel_Id}&maxResults={maxVideos}&order=date&type=video&key={apiKey}"
+    type = "video"
+    url = f"https://www.googleapis.com/youtube/v3/search?part={part}&channelId={channel_Id}&maxResults={maxVideos}&order=date&type={type}&key={apiKey}"
     try:
         req = request.urlopen(url)
         data = req.read().decode()
