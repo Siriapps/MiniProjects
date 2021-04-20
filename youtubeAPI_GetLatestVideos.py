@@ -19,12 +19,14 @@ def getLatestVideos(channel_Id, maxVideos):
             tagsList.append({
                 "Title" : title,
                 "Description":description,
-                "Video ID":videoId
+                "Video ID":videoId,
+                "Video Url":f"https://www.youtube.com/watch?v={videoId}"
             })
 
     except Exception as e:
         print("Error ",e)
     return tagsList
+
 
 id = input("Enter Youtube channel Id: ")
 MaxCount = input("Enter how many latest videos you want: ")
